@@ -12,7 +12,7 @@ server = app.server
 
 # set logging
 log = logging.getLogger('werkzeug')
-log.setLevel(logging.WARN)
+log.setLevel(logging.DEBUG)
 
 # init cache
 with server.app_context():
