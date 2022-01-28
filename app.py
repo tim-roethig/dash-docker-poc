@@ -1,3 +1,4 @@
+import logging
 import dash
 from dash import html, dcc
 from dash.dependencies import Input, Output, State
@@ -9,6 +10,11 @@ app = dash.Dash()
 # def server
 server = app.server
 
+# set logging
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.WARN)
+
+# init cache
 with server.app_context():
     current_app.rfq = None
 
