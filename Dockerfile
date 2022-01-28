@@ -11,7 +11,7 @@ RUN wget --no-check-certificate -nv https://nlblakappvp08.nlbapp.f-i-verbund.de/
     ln -s /opt/miniconda3/bin/pip /usr/local/bin/                                                                                && \
     wget --no-check-certificate -nv https://nlblakappvp08.nlbapp.f-i-verbund.de/conf/pip.conf                                    && \
     mv pip.conf /etc/pip.conf                                                                                                    && \
-    pip3 install -r requirements.txt                                                                                             && \
+    pip3 install -r requirements.txt
     #ln -s /opt/miniconda3/bin/uwsgi /usr/local/bin/
 
 # Run the API inside the container
