@@ -17,9 +17,12 @@ if [[ -z ${REST_PORT} ]]; then
     exit 1
 fi
 
-# set port in a dirty way
+# Set port in a dirty way FIXME
 sed -i "s/REST_PORT/${REST_PORT}/" app.py
+# Write application port into uwsgi configuration
+sed -i "s/REST_PORT/${REST_PORT}/" uwsgi.ini
 
+# FIXME
 python3 app.py
 
 echo "$(date +'%H:%M:%S %d-%m-%Y') INFO: Completed the execution of entrypoint.sh"
