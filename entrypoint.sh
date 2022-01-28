@@ -17,5 +17,9 @@ if [[ -z ${REST_PORT} ]]; then
     exit 1
 fi
 
+# set port in a dirty way
+sed -i "s/REST_PORT/${REST_PORT}/" app.py
+
 python3 app.py
+
 echo "$(date +'%H:%M:%S %d-%m-%Y') INFO: Completed the execution of entrypoint.sh"

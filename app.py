@@ -58,4 +58,4 @@ def update_popup(stored_rfq):
 
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(port=REST_PORT)
